@@ -1,3 +1,13 @@
+/* Web fonts -------------------- */
+@font-face {
+    font-family: 'Abolition Regular';
+    src: url('../fonts/abolition-regular-webfont.eot');
+    src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abolition-regular-webfont.woff') format('woff'),
+         url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+
 /* Base Styles -------------------- */
 
 * {
@@ -10,6 +20,11 @@ body {
     font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h1,
+h2{
+   font-family: "Abolition Regular", Helvetica, Arial, sans-serif;
+}
+
 h1 {
     font-size: 5.625rem; /* 90px/16px  */
     color: rgba(255, 255, 255, 1);
@@ -17,6 +32,7 @@ h1 {
     font-weight: normal;
     line-height: 1.3;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
+    margin: 12px 0 0;
 }
 
 h2 {
@@ -36,6 +52,7 @@ h3 {
 img {
     max-width: 100%;
     margin-bottom: 20px;
+    border-radius:10px;
 }
 
 ul,
@@ -72,13 +89,24 @@ a:active {
 .main-header {
     padding-top: 170px;
     height: 850px;
-    background: #ffa949 url('../img/mountains.jpg') no-repeat center;
+   
+    background:
+            linear-gradient(#ffa949, transparent 90%),
+            linear-gradient(0deg, #fff, transparent 20%),
+             #ffa949 url('../img/mountains.jpeg') no-repeat center;
+    
     background-size: cover;
+    ;
 }
 
 .title {
     color: white;
     font-size: 1.625rem; /* 26px/16px */
+    letter-spacing: .065em;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    text-shadow: -2px 1px 5px rgba(0, 0, 0, .3);
 }
 
 .intro {
@@ -141,11 +169,17 @@ a:active {
     background: #434a52 url('../img/bear.jpg') no-repeat center;
     background-size: cover;
     box-shadow: inset 0px 0px 15px 10px rgba(0,0,0,1);
+    border-radius:10px ;
 }
 
 .arrow {
     width: 50px;
+    margin: 150px 0 0;
 }
+
+/* .arrow:hover {
+    transform: scale(1.2);
+} */
 
 /* Float Columns ------------------ */
 
@@ -169,4 +203,81 @@ a:active {
     content: "";
     display: table;
     clear: both;
+}
+
+/* Media Queries--------------------- */
+/* @media(max-width:960px) {
+    body{
+        background: royalblue;
+    }
+}
+
+@media(max-width:480px) {
+    body{
+        background: darkred;
+    }
+}
+
+@media(min-width:481px) and (max-width:700px){
+    body{
+        background: seagreen;
+    }
+
+    p{
+        color:white;
+    }
+} */
+
+@media(max-width:1024px) {
+    .primary-content,
+    .secondary-content{
+        width:90%;
+    }
+
+    .wildlife{
+        padding:10% 5%;
+        margin: 10px 12px;
+    }
+}
+
+@media(max-width:768px) {
+    .primary-content,
+    .secondary-content{
+        width:90%;
+        padding: 20px;
+        border-top: none;
+    }
+
+    .main-header{
+        max-height:380px;
+        padding:50px 25px 0;
+    }
+
+    .title{
+        font-size: 1.3rem;
+        border-style: none;
+    }
+
+    .h1{
+        font-size: 5rem/1.1;
+    }
+
+    .arrow{
+        display:none;
+    }
+
+    .intro{
+        font-size:1rem;
+    }
+
+    .tips,
+    .resorts{
+        float:none;
+        width:100%;
+    }
+
+    .main-footer{
+        padding: 20px 0;
+    }
+
 }
