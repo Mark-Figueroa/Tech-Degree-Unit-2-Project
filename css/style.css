@@ -1,283 +1,357 @@
-/* Web fonts -------------------- */
-@font-face {
-    font-family: 'Abolition Regular';
-    src: url('../fonts/abolition-regular-webfont.eot');
-    src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/abolition-regular-webfont.woff') format('woff'),
-         url('../fonts/abolition-regular-webfont.ttf') format('truetype');
-}
-
-
-/* Base Styles -------------------- */
-
-* {
+/* =================
+All Styles
+=====================*/
+*{
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif ;   /*Source Sans Pro is a Google font*/
 }
 
-body {
-    color: #878787;
-    margin: 0;
-    font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* ====================
+Non-specific Tag Styles
+Designed for Mobile
+=======================*/
 
-h1,
-h2{
-   font-family: "Abolition Regular", Helvetica, Arial, sans-serif;
-}
-
-h1 {
-    font-size: 5.625rem; /* 90px/16px  */
-    color: rgba(255, 255, 255, 1);
-    text-transform: uppercase;
-    font-weight: normal;
-    line-height: 1.3;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, .8);
-    margin: 12px 0 0;
-}
-
-h2 {
-    font-size: 3.3125em; /* 53px/16px  */
-    font-weight: normal;
-    line-height: 1.1;
-    margin: 0 0 .5em; /* 0 0 26px */
-}
-
-h3 {
-    font-size: 1.25em; /* 20px/16px  */
-    color: #48525c;
-    line-height: 1.2;
-    margin-bottom: 1.7em; /* 34px */
-}
-
-img {
-    max-width: 100%;
-    margin-bottom: 20px;
-    border-radius:10px;
-}
-
-ul,
-ol {
-    padding-left: 10;
-    margin: 30px 0;
-}
-
-li{
-    margin-bottom:10px;
-}
-
-/* Pseudo-classes ------------------ */
-
-a:link {
-    color: rgb(255, 169, 73);
-    text-decoration: none;
-}
-
-a:visited {
-    color: lightblue;
-}
-
-a:hover {
-    color: rgba(255, 169, 73, .4);
-}
-
-a:active {
-    color: lightcoral;
-}
-
-/* Main Styles --------------------- */
-
-.main-header {
-    padding-top: 170px;
-    height: 850px;
-   
-    background:
-            linear-gradient(#ffa949, transparent 90%),
-            linear-gradient(0deg, #fff, transparent 20%),
-             #ffa949 url('../img/mountains.jpeg') no-repeat center;
-    
-    background-size: cover;
-    ;
-}
-
-.title {
-    color: white;
-    font-size: 1.625rem; /* 26px/16px */
-    letter-spacing: .065em;
-    font-weight: 200;
-    border-bottom: 2px solid;
-    padding-bottom: 10px;
-    text-shadow: -2px 1px 5px rgba(0, 0, 0, .3);
-}
-
-.intro {
-    font-size: 1.25em; /* 20px/16px */
-    line-height: 1.6;
-}
-
-.primary-content,
-.main-header,
-.main-footer {
+Body{
+    background: #cee6ec;
     text-align: center;
 }
 
-.primary-content {
-    padding-top: 25px;
-    padding-bottom: 95px;
+a{
+    text-decoration: none;
+    color: royalblue;
 }
 
-.secondary-content {
-    padding-top: 80px;
-    padding-bottom: 70px;
-    border-bottom: 2px solid #dfe2e6;
+a:hover{
+    color: blueviolet;
 }
 
-.callout {
-    font-size: 1.25em;
-    border-bottom: 3px solid;
-    padding: 0 9px 3px;
-    margin-top: 20px;
-    display: inline-block;
+ul,
+ol{
+    list-style-type: none;
+    padding:0 0;
+    margin:50px 50px;
 }
 
-.main-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    border-bottom: 10px solid #ffa949;
+p{
+    font-size:1.2em;
+    display: block;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: 80%;
 }
 
-.t-border {
-    border-top: 2px solid #dfe2e6;
+
+
+/* ====================
+Header Elements Specific Styles
+Designed for Mobile
+=======================*/
+
+header{
+    margin: 0 0;
+    padding: 30px 0;
 }
 
-/* Layout Styles ------------------ */
+header h1{
+    font-size:2.5em;
+    text-shadow: -1px 1px 1px cadetblue;
+    text-shadow: -2px 2px 2px cadetblue;
+}
 
-.primary-content,
-.secondary-content {
-    width: 75%;
-    padding-left: 50px;
-    padding-right: 50px;
+header ul,
+header ol{
+    list-style-type: none;
+    padding:0 0;
+    margin:50px 50px;
+}
+
+header li{
+    font-size:2em;
+    display: block;
+    background: #fff;
+    padding: 20px 0px;
+    margin: 15px 0;
+    box-shadow: -4px 5px 5px rgba(0,0,0,.3);
+}
+
+header li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header li a:hover{
+    color: #cad4d6;
+}
+
+header .image-container{
+    width: 80%;
+    background: #cad4d6;
+    margin: 0 auto;
+    Padding: 30px 0;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,.3);
+}
+
+hgroup{
+    text-align: center;
+}
+
+/* ====================
+Main Elements Specific Styles
+Designed for Mobile
+=======================*/
+
+.profile-image{
+    width:65%;
+    border-radius: 50%;
+    box-shadow: -2px 1px 10px rgba(0,0,0,.3);
+}
+
+.portfolio{
+    display: block;
+    background: #fff;
+    padding:50px 0;
+    margin: 0 auto;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+}
+
+#portfolio{
+    display: block;
+    padding: 50px 0;
+    margin: 0 auto;
+    color: darkblue;
+    text-shadow: -1px 1px 1px cadetblue;
+}
+
+.page {
+    display: block;
+    padding: 20px 0;
+    margin:0 auto;
+    width: 100%;
+}
+
+.page img{
+    width: 100%;
+}
+
+.page h2{
+    padding:20px 0 ;
+    font-size: 1.3em;
+    text-shadow: -1px 1px 3px rgba(0,0,0,.3);
+}
+
+.page p{
+    font-size: 1em;
+    padding: 0;
     margin: auto;
-    max-width: 960px;
 }
 
-.wildlife {
-    color: white;
-    text-align: left;
-    padding: 18% 24%;
-    border-top: 10px solid #ffa949;
-    margin: 105px 0 60px;
-    background: #434a52 url('../img/bear.jpg') no-repeat center;
-    background-size: cover;
-    box-shadow: inset 0px 0px 15px 10px rgba(0,0,0,1);
-    border-radius:10px ;
+.skills{
+    display:block;
+    border-top: 3px solid rgba(0,0,0,.3);
+    background: #cad4d6;
+    margin: 0 0;
+    padding:50px 0;
 }
 
-.arrow {
-    width: 50px;
-    margin: 150px 0 0;
+#skills{
+    padding: 30px 0;
+    margin-bottom: 50px;
+    color: darkblue;
+    text-shadow: -1px 1px 1px cadetblue;
 }
 
-/* .arrow:hover {
-    transform: scale(1.2);
-} */
-
-/* Float Columns ------------------ */
-
-.resorts, .tips
-{
-    width:46.5%;
+.skills-image{
+    width: 100%;
 }
 
-.resorts {
-    float: left;
-}
-.tips{
-    float:right;
-}
-
-
-
-/* Float Clearfix ------------------ */
-
-.group:after {
-    content: "";
-    display: table;
-    clear: both;
+.contact{
+    border-top: 3px solid rgba(0,0,0,.3);
+    display: block;
+    width: 100%;
+    padding: 50px 0;
+    margin: 0;
 }
 
-/* Media Queries--------------------- */
-/* @media(max-width:960px) {
-    body{
-        background: royalblue;
+#contact{
+    display: block;
+    width: 80%;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+/* ====================
+Footer for Mobile
+=======================*/
+
+.mobile-footer{
+    position: relative;
+    display: block;
+    padding:30px 0;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.footer-name{
+    position:absolute;
+    left:30px;
+}
+
+.to-top{
+    position: absolute;
+    right:30px;
+}
+
+
+/* ====================
+Media Queries
+=======================*/
+
+/* Resolutions larger than 768px */
+
+@media (min-width:768px) {
+
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
     }
-}
-
-@media(max-width:480px) {
-    body{
-        background: darkred;
+    
+    header{
+        margin: 30px 0;
+        padding: 30px 0;
     }
-}
-
-@media(min-width:481px) and (max-width:700px){
-    body{
-        background: seagreen;
+    
+    header h1{
+        font-size:2.5em;
+        text-shadow: -1px 1px 1px cadetblue;
+        text-shadow: -2px 2px 2px cadetblue;
+    }
+    
+    header ul,
+    header ol{
+        list-style-type: none;
+        display: block;
+        padding:10px  0 30px 0;
+        margin:50px auto;
+        position: relative;
+    }
+    
+    header li{
+        font-size:2em;
+        display: inline-block;
+        margin: 0 15px;
+        padding: 0 15px;
+        background: none;
+        box-shadow: none;
     }
 
-    p{
-        color:white;
-    }
-} */
+    
+    header .image-container{
+        width: 40%;
+        max-width: 700px;
+        background: #cad4d6;
+        margin: 0 20px;
+        Padding: 30px 30px;
+        box-shadow: inset 0 5px 10px rgba(0,0,0,.3);
+        float:right;
+    }    
 
-@media(max-width:1024px) {
-    .primary-content,
-    .secondary-content{
-        width:90%;
+    .header-p{
+        float: left;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0 30px;
     }
 
-    .wildlife{
-        padding:10% 5%;
-        margin: 10px 12px;
+    main{
+        padding: 0 0;
+        margin: 0 0;
     }
-}
 
-@media(max-width:768px) {
-    .primary-content,
-    .secondary-content{
-        width:90%;
-        padding: 20px;
+    .portfolio{
+        width:100%;
+        margin: 0 auto;
+        padding: 0 0;
+        display:block;
+        text-align: center;
+    }
+
+    .page{
+        display:inline-block;
+        width: 40%;
+        margin:10px 20px;
+        padding: 10px 10px;
+    }
+
+    .page p{
+        width:100%;
+        margin: 0 auto;
+        padding:0 0;
+        text-align: center;
+    }
+
+    #skills,
+    .skills{
+        display:block;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 0;
+        border-bottom: none;
+        
+    }
+
+    .skills-image{
+        width: 75%;
+    }
+
+    .contact{
         border-top: none;
     }
+}
 
-    .main-header{
-        max-height:380px;
-        padding:50px 25px 0;
+/* Resolutions larger than 768px */
+
+@media (min-width:1024px) {
+
+    .clearfix::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    header{
+        margin-top: 0;
+        padding-top: 10px;
+        
     }
 
-    .title{
-        font-size: 1.3rem;
-        border-style: none;
+    .student-name{
+        float: left;
+        padding: 30px 30px 30px 120px;
+        margin: 20px auto;
     }
 
-    .h1{
-        font-size: 5rem/1.1;
+    .main-nav{
+        float: right;
+        padding: 45px 30px 30px;
+        margin: 20px auto;
+        font-size: .7em;
     }
 
-    .arrow{
-        display:none;
-    }
-
-    .intro{
-        font-size:1rem;
-    }
-
-    .tips,
-    .resorts{
-        float:none;
+    .portfolio{
         width:100%;
+        margin: 0 auto;
+        padding: 0 0;
+        display:block;
+        text-align: center;
     }
 
-    .main-footer{
-        padding: 20px 0;
+    .page{
+        display:inline-block;
+        width: 26%;
+        margin:10px 20px;
+        padding: 10px 10px;
     }
 
 }
