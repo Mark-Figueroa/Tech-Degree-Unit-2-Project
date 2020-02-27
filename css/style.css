@@ -1,10 +1,12 @@
 /* =================
 All Styles
 =====================*/
+
 *{
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif ;   /*Source Sans Pro is a Google font*/
 }
+
+
 
 /* ====================
 Non-specific Tag Styles
@@ -14,6 +16,23 @@ Designed for Mobile
 Body{
     background: #cee6ec;
     text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    
+}
+
+
+h1,
+h2,
+h3
+{
+    font-family: 'VT323' ;
+    letter-spacing: .1em;
+}
+
+h2,
+h3{
+    font-size: 1.8em;
 }
 
 a{
@@ -22,7 +41,7 @@ a{
 }
 
 a:hover{
-    color: blueviolet;
+    color: firebrick;
 }
 
 ul,
@@ -31,6 +50,7 @@ ol{
     padding:0 0;
     margin:50px 50px;
 }
+
 
 p{
     font-size:1.2em;
@@ -74,16 +94,25 @@ header li{
     box-shadow: -4px 5px 5px rgba(0,0,0,.3);
 }
 
+header li:hover{
+    box-shadow: inset -4px 5px 5px rgba(0,0,0,.3);
+}
+
+
 header li a{
     text-decoration: none;
-    color: #000;
+    color: #333;
+    display:block;
+    width:100%;
+    height: 100%;
 }
 
 header li a:hover{
-    color: #cad4d6;
+    color: black;
+    text-shadow: -4px 3px 5px gray;
 }
 
-header .image-container{
+.image-container{
     width: 80%;
     background: #cad4d6;
     margin: 0 auto;
@@ -91,9 +120,7 @@ header .image-container{
     box-shadow: inset 0 5px 10px rgba(0,0,0,.3);
 }
 
-hgroup{
-    text-align: center;
-}
+
 
 /* ====================
 Main Elements Specific Styles
@@ -119,12 +146,26 @@ Designed for Mobile
     padding: 50px 0;
     margin: 0 auto;
     color: darkblue;
-    text-shadow: -1px 1px 1px cadetblue;
+    text-shadow: -3px 1px 3px cadetblue;
+}
+
+#top:hover,
+#portfolio:hover,
+#skills:hover{
+    color: black;
+    font-family: 'Permanent Marker';
+    text-shadow: -3px 1px 3px cadetblue;
+}
+
+h2:hover,h3:hover{
+    color: firebrick;    
+    font-family: 'Pacifico';
+    text-shadow: -3px 1px 3px cadetblue;
 }
 
 .page {
     display: block;
-    padding: 20px 0;
+    padding: 30px 0;
     margin:0 auto;
     width: 100%;
 }
@@ -133,9 +174,13 @@ Designed for Mobile
     width: 100%;
 }
 
-.page h2{
+
+
+.page h2,
+h3
+{
     padding:20px 0 ;
-    font-size: 1.3em;
+    font-size: 1.6em;
     text-shadow: -1px 1px 3px rgba(0,0,0,.3);
 }
 
@@ -150,7 +195,11 @@ Designed for Mobile
     border-top: 3px solid rgba(0,0,0,.3);
     background: #cad4d6;
     margin: 0 0;
-    padding:50px 0;
+    padding:20px 0 ;
+}
+
+.skills ul{
+    font-size: 1.4em;
 }
 
 #skills{
@@ -165,7 +214,7 @@ Designed for Mobile
 }
 
 .contact{
-    border-top: 3px solid rgba(0,0,0,.3);
+    border-top: 3px solid rgba(0, 0, 0, 0.3);
     display: block;
     width: 100%;
     padding: 50px 0;
@@ -206,8 +255,17 @@ Footer for Mobile
 Media Queries
 =======================*/
 
-/* Resolutions larger than 768px */
 
+/* Hides 4-link footer nav on displays less than 768px */
+@media (max-width:768px){
+.footer-nav{
+    display: none;
+}
+
+}
+
+
+/* Resolutions larger than 768px */
 @media (min-width:768px) {
 
     .clearfix::after{
@@ -223,8 +281,8 @@ Media Queries
     
     header h1{
         font-size:2.5em;
-        text-shadow: -1px 1px 1px cadetblue;
-        text-shadow: -2px 2px 2px cadetblue;
+        text-shadow: -1px 1px 1px cadetblue,
+                     -2px 2px 2px rgb(80, 119, 120);
     }
     
     header ul,
@@ -245,8 +303,11 @@ Media Queries
         box-shadow: none;
     }
 
-    
-    header .image-container{
+    header li:hover{
+        box-shadow: none;
+    }
+
+    .image-container{
         width: 40%;
         max-width: 700px;
         background: #cad4d6;
@@ -256,11 +317,21 @@ Media Queries
         float:right;
     }    
 
+    .image-container:hover{
+        box-shadow: 0 5px 10px rgba(0,0,0,.3);
+        background:white;
+    }    
+
     .header-p{
         float: left;
         width: 50%;
         margin: 0 auto;
         padding: 0 30px;
+    }
+
+    .header-p h3{
+        margin:0 auto;
+        padding: 0 0 15px 0;
     }
 
     main{
@@ -271,7 +342,7 @@ Media Queries
     .portfolio{
         width:100%;
         margin: 0 auto;
-        padding: 0 0;
+        padding: 0 0 50px;
         display:block;
         text-align: center;
     }
@@ -279,38 +350,66 @@ Media Queries
     .page{
         display:inline-block;
         width: 40%;
-        margin:10px 20px;
-        padding: 10px 10px;
+        margin:10px 30px;
+        padding: 30px 10px;
+    }
+
+    .page:hover{
+        box-shadow: 0 0 15px 5px rgba(0,0,0,.3);
+        cursor: pointer;
     }
 
     .page p{
-        width:100%;
+        display:block;
+        width:80%;
         margin: 0 auto;
-        padding:0 0;
+        padding:0 15px;
         text-align: center;
     }
 
-    #skills,
     .skills{
         display:block;
         text-align: center;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
-        padding: 0 0;
+        padding: 30px 0;
         border-bottom: none;
         
     }
 
     .skills-image{
-        width: 75%;
+        width: 80%;
     }
 
     .contact{
         border-top: none;
     }
+
+    .to-top{
+        display: none;
+    }
+    
+    footer{
+        position: relative;
+    }
+
+    .footer-nav{
+        position: absolute;
+        right: 50px;
+        margin: 0 auto;
+    }
+
+    .footer-nav ul{
+        display: inline-block;
+    }
+
+    .footer-nav li{
+        display: inline-block;
+        padding: 0 20px;
+    }
 }
 
-/* Resolutions larger than 768px */
+/* Resolutions larger than 1024px */
 
 @media (min-width:1024px) {
 
@@ -326,6 +425,11 @@ Media Queries
         
     }
 
+    .name{
+        display: block;
+        text-align: center;
+    }
+
     .student-name{
         float: left;
         padding: 30px 30px 30px 120px;
@@ -339,10 +443,16 @@ Media Queries
         font-size: .7em;
     }
 
+    .image-block{
+        max-width: 80%;
+        margin: 50px auto;
+        display: block;
+    }
+
     .portfolio{
         width:100%;
         margin: 0 auto;
-        padding: 0 0;
+        padding: 0 0 30px;
         display:block;
         text-align: center;
     }
@@ -353,5 +463,4 @@ Media Queries
         margin:10px 20px;
         padding: 10px 10px;
     }
-
 }
